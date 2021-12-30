@@ -1,0 +1,28 @@
+{% extends 'layout/_layout.html' %}
+{% load static %}
+
+{% block title %}Recipes{% endblock %}
+
+{% block content %}
+  <div class="row mx-1 p-5 rm-banner">
+    <div class="col">
+      <figure class="text-center">
+        <blockquote class="blockquote text-light">
+          <h1>欢迎来到芜湖大饭店</h1>
+        </blockquote>
+      </figure>
+      <p class="h3"></p>
+    </div>
+  </div>
+  <hr>
+  <div class="row">
+    {% if recipes %}
+      <h3>菜单</h3>
+      <p>这里是菜单，点击了解详细信息</p>
+      {% include 'recipes/__list_cards.html' %}
+    {% else %}
+    <p class="lead">还没有菜单，加点<a href="{% url 'recipe-add' %}">新菜谱吧</a> </p>
+    {% endif %}
+  </div>
+
+{% endblock %}

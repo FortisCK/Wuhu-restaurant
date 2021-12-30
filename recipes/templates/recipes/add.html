@@ -1,0 +1,9 @@
+{% extends 'layout/_layout_form.html' %}
+{% load crispy_forms_tags %}
+
+{% block title %}增加菜单{% endblock %}
+
+{% block form %}
+  <p class="lead mb-5">增加菜单</p>
+  {% crispy form %}
+{% endblock %}

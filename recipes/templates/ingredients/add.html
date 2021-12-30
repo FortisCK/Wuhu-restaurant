@@ -1,0 +1,13 @@
+{% extends 'layout/_layout_form.html' %}
+
+{% load crispy_forms_tags %}
+
+{% block title %}增加食材{% endblock %}
+
+{% block form %}
+  <form method="post">{% csrf_token %}
+    <p class="lead">增加食材</p>
+    {{ form|crispy }}
+    <input class="form-control btn-primary bg-rm-main my-4" type="submit" value="增加食材">
+  </form>
+{% endblock %}
